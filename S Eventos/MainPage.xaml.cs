@@ -1,4 +1,4 @@
-﻿namespace D_Eventos
+﻿namespace S_Eventos
 {
     public partial class MainPage : ContentPage
     {

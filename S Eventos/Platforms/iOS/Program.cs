@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace D_Eventos
+namespace S_Eventos
 {
     public class Program
     {

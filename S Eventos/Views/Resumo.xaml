@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="S_Eventos.Views.Resumo"
+             BackgroundColor="{StaticResource CorFundo}"
+             Title="Resumo"
+             NavigationPage.HasNavigationBar="False"
+             Padding="20">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="30">
+
+            <!-- Título -->
+            <Label Text="Resumo do Evento"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource CorTitulo}" />
+
+            <!-- Cartão de Resumo -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="20"
+                   Padding="24"
+                   HasShadow="True"
+                   BorderColor="#E0E0E0">
+
+                <VerticalStackLayout Spacing="18">
+                    <!-- Linha: Nome -->
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="📌 Nome:" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                        <Label x:Name="lbl_nome" TextColor="{StaticResource CorTexto}" Grid.Column="1" />
+                    </Grid>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E5E7EB" />
+
+                    <!-- Linha: Data de Início -->
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="🗓️ Início:" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                        <Label x:Name="lbl_data_inicio" TextColor="{StaticResource CorTexto}" Grid.Column="1" />
+                    </Grid>
+
+                    <!-- Linha: Data de Término -->
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="🏁 Término:" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                        <Label x:Name="lbl_data_termino" TextColor="{StaticResource CorTexto}" Grid.Column="1" />
+                    </Grid>
+
+                    <!-- Linha: Duração -->
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="⏳ Duração:" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                        <Label x:Name="lbl_duracao" TextColor="{StaticResource CorTexto}" Grid.Column="1" />
+                    </Grid>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E5E7EB" />
+
+                    <!-- Linha: Participantes -->
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="👥 Participantes:" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                        <Label x:Name="lbl_participantes" TextColor="{StaticResource CorTexto}" Grid.Column="1" />
+                    </Grid>
+
+                    <!-- Linha: Custo por Participante -->
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="💸 Custo p/ Pessoa:" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                        <Label x:Name="lbl_custo_participante" TextColor="{StaticResource CorTexto}" Grid.Column="1" />
+                    </Grid>
+
+                    <!-- Linha: Custo Total -->
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="💰 Custo Total:" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                        <Label x:Name="lbl_custo_total" TextColor="{StaticResource CorTexto}" Grid.Column="1" />
+                    </Grid>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E5E7EB" />
+
+                    <!-- Linha: Local -->
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="📍 Local:" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                        <Label x:Name="lbl_local" TextColor="{StaticResource CorTexto}" Grid.Column="1" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Botão Voltar -->
+            <Button Text="⟵ Voltar"
+                    Clicked="Voltar"
+                    BackgroundColor="{StaticResource CorBotao}"
+                    TextColor="{StaticResource CorBotaoTexto}"
+                    FontAttributes="Bold"
+                    HeightRequest="55"
+                    CornerRadius="14" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

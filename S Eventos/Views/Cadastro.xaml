@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S_Eventos.Views.Cadastro"
+             BackgroundColor="{StaticResource CorFundo}"
+             Title="Cadastro"
+             NavigationPage.HasNavigationBar="False"
+             Padding="20">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25">
+
+            <Label Text="Novo Evento"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource CorTitulo}"
+                   HorizontalOptions="Center" />
+
+            <Frame CornerRadius="16" Padding="20" BackgroundColor="White" HasShadow="True">
+                <VerticalStackLayout Spacing="16">
+
+                    <Label Text="Nome do Evento" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                    <Entry x:Name="nome_evento" Placeholder="Digite o nome" TextColor="{StaticResource CorTexto}" />
+
+                    <Label Text="Data de Início" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                    <DatePicker x:Name="data_inicio" Format="dd/MM/yyyy" TextColor="{StaticResource CorTexto}" />
+
+                    <Label Text="Data de Término" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                    <DatePicker x:Name="data_termino" Format="dd/MM/yyyy" TextColor="{StaticResource CorTexto}" />
+
+                    <Label Text="Participantes" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                    <HorizontalStackLayout Spacing="10">
+                        <Stepper x:Name="stepper_participantes"
+                                 Minimum="0"
+                                 Maximum="100"
+                                 Increment="1"
+                                 ValueChanged="OnStepperValueChanged" />
+                        <Label x:Name="label_participantes"
+                               VerticalOptions="Center"
+                               Text="0 participantes"
+                               TextColor="{StaticResource CorTexto}" />
+                    </HorizontalStackLayout>
+
+                    <Label Text="Custo por Participante (R$)" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                    <Entry x:Name="custo_participante" Placeholder="Ex: 50,00" Keyboard="Numeric" TextColor="{StaticResource CorTexto}" />
+
+                    <Label Text="Local do Evento" FontAttributes="Bold" TextColor="{StaticResource CorLabel}" />
+                    <Picker x:Name="local_evento" Title="Selecione um local" TextColor="{StaticResource CorTexto}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Cadastrar"
+                    x:Name="btn_enviar"
+                    Clicked="OnEnviarClicked"
+                    BackgroundColor="{StaticResource CorBotaoConfirmar}"
+                    TextColor="{StaticResource CorBotaoTexto}"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    CornerRadius="12" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace D_Eventos
+namespace S_Eventos
 {
     [Application]
     public class MainApplication : MauiApplication

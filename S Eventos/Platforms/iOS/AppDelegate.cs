@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace D_Eventos
+namespace S_Eventos
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

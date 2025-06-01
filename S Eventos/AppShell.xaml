@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="D_Eventos.AppShell"
+    x:Class="S_Eventos.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:D_Eventos"
+    xmlns:local="clr-namespace:S_Eventos"
     Shell.FlyoutBehavior="Disabled"
-    Title="D_Eventos">
+    Title="S_Eventos">
 
     <ShellContent
         Title="Home"

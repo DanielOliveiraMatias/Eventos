@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace D_Eventos
+namespace S_Eventos
 {
     public static class MauiProgram
     {

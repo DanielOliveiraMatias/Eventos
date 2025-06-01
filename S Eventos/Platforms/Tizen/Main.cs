@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace D_Eventos
+namespace S_Eventos
 {
     internal class Program : MauiApplication
     {
